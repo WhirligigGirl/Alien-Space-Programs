@@ -3,15 +3,8 @@ READ ME FOR FECUNDITY'S SAKE
 ALIEN SPACE PROGRAMS
 Version 1.0
 For KSP 1.3.X
-----------------------------
 
-PICTURES:
-
-![http://i.imgur.com/fyQHsy8.png](http://i.imgur.com/fyQHsy8.png)
-
-![http://i.imgur.com/haTRy5R.png](http://i.imgur.com/haTRy5R.png)
-
-![http://i.imgur.com/EbiPugd.png](http://i.imgur.com/EbiPugd.png)
+![http://i.imgur.com/vuVz3Qa.png](http://i.imgur.com/vuVz3Qa.png)
 
 ----------------------------
 
