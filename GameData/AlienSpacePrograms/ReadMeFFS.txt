@@ -3,9 +3,6 @@ READ ME FOR FECUNDITY'S SAKE
 ALIEN SPACE PROGRAMS
 Version 1.0
 For KSP 1.3.X
-
-![http://i.imgur.com/vuVz3Qa.png](http://i.imgur.com/vuVz3Qa.png)
-
 ----------------------------
 
 INSTALLATION:
@@ -13,7 +10,7 @@ INSTALLATION:
 1) Download and install Kopernicus.
 2) Ensure that ModuleManager, ModularFlightIntegrator, and Kopernicus are all installed. 
 (You don't need to reinstall any of these if you already have them)
-3) Put the AlienSpacePrograms folder in GameData.
+3) Put the AlienSpacePrograms folder (the one this readme is stored in) in GameData.
 4) Select a New Homeworld in the settings config file.
 
 ----------------------------
