@@ -1,7 +1,7 @@
 READ ME FOR FECUNDITY'S SAKE
 
 ALIEN SPACE PROGRAMS
-Version 1.0
+Version 1.1
 For KSP 1.3.X
 ----------------------------
 
@@ -26,11 +26,12 @@ HOMEWORLD SELECTION:
 
 FEATURES:
 
-* Eve, Duna, and Laythe are now available as playable homeworlds.
+* Eve, Duna, Laythe, and Tylo are now available as playable homeworlds.
 * Kerbin, now devoid of Kerbal life, has been renamed Bin.
 * Accurate PQSMods to the stock planets.
 * Graphical improvements to Eve, Laythe, and Duna surface textures.
 * Balanced science multipliers.
+* Realistic Atmospheres.
 
 ----------------------------
 
@@ -40,13 +41,16 @@ CREDITS:
 * Gordon Fecyk (Updating the mod to modern versions of KSP and Kopernicus, fixing bugs, balancing tweaks, and more)
 * KillAshley (Surface Texture configs from KASE)
 * Sigma88 (Assistance with the initial creation of Duna Space Program)
+* OhioBob (Most of the Atmospheric Configs)
 * Probus (Co-creator of Little Green Men from Mars, inspiration for Duna Space Program)
 
 ----------------------------
 
 LICENSE:
 
-Creative Commons Attribution Share Alike 4.0
+Almost Everything: Creative Commons Attribution Share Alike 4.0
+
+Realistic Atmosphere Configs: MIT License Copyright (c) 2017 Robert A. Braeunig
 
 ----------------------------
 
