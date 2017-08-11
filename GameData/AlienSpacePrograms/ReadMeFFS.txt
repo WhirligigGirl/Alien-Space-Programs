@@ -26,7 +26,7 @@ HOMEWORLD SELECTION:
 
 FEATURES:
 
-* Eve, Duna, Laythe, and Tylo are now available as playable homeworlds.
+* Eve, Minmus, Duna, Jool, Laythe, and Tylo are now available as playable homeworlds.
 * Kerbin, now devoid of Kerbal life, has been renamed Bin.
 * Accurate PQSMods to the stock planets.
 * Graphical improvements to Eve, Laythe, and Duna surface textures.
