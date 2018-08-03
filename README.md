@@ -1,16 +1,14 @@
-READ ME FOR FECUNDITY'S SAKE
-
 ALIEN SPACE PROGRAMS
-Version 1.0
-For KSP 1.3.X
+Version 1.2
+For KSP 1.4.3 and 1.4.5
 
-![http://i.imgur.com/vuVz3Qa.png](http://i.imgur.com/vuVz3Qa.png)
+![http://www.antiwindowscatalog.com/media/ksp/ASP-Home.png](http://www.antiwindowscatalog.com/media/ksp/ASP-Home.png)
 
 ----------------------------
 
 INSTALLATION:
 
-1) Download and install Kopernicus.
+1) Download and install Kopernicus. Minimum supported version is 1.4.3-2, though 1.3.1-9 may work.
 2) Ensure that ModuleManager, ModularFlightIntegrator, and Kopernicus are all installed. 
 (You don't need to reinstall any of these if you already have them)
 3) Put the AlienSpacePrograms folder in GameData.
@@ -29,7 +27,7 @@ HOMEWORLD SELECTION:
 
 FEATURES:
 
-* Eve, Duna, and Laythe are now available as playable homeworlds.
+* Multiple worlds are now available as playable homeworlds.
 * Kerbin, now devoid of Kerbal life, has been renamed Bin.
 * Accurate PQSMods to the stock planets.
 * Graphical improvements to Eve, Laythe, and Duna surface textures.
@@ -44,6 +42,7 @@ CREDITS:
 * KillAshley (Surface Texture configs from KASE)
 * Sigma88 (Assistance with the initial creation of Duna Space Program)
 * Probus (Co-creator of Little Green Men from Mars, inspiration for Duna Space Program)
+* BigFastStupidHead (providing Dres as an option)
 
 ----------------------------
 
