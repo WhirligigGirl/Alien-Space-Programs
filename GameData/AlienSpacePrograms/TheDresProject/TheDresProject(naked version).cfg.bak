@@ -1,0 +1,432 @@
+@Kopernicus:AFTER[Kopernicus]
+{
+!Body[Dres]{}
+	@Body[Kerbin]
+	{
+	@name = Novo Kerbin
+		@Template
+		{
+		RemovePQSMods = PQSCity
+		}
+		@Properties
+		{
+		description = Novo Kerbin is a beautiful planet with deep blue oceans, wide open skies, and lush green lands. We set out to colonize this ideallic planet, but instead we ended up on Dres.
+		isHomeWorld = False
+			@ScienceValues
+			{
+			landedDataValue = 14
+			splashedDataValue = 12
+			flyingLowDataValue = 11
+			flyingHighDataValue = 10
+			inSpaceLowDataValue = 9
+			inSpaceHighDataValue = 8
+			recoveryValue = 8
+			flyingAltitudeThreshold = 10000
+			spaceAltitudeThreshold = 200000
+			}
+		}
+	}
+
+	Body
+	{
+	name = Kerbin
+	cbNameLater = Dres
+		Template
+		{
+		name = Kerbin
+		removePQSMods = PQSLandControl,PQSMod_QuadEnhanceCoast,PQSMod_VertexHeightMap,PQSMod_VertexHeightNoiseVertHeightCurve2,PQSMod_VertexRidgedAltitudeCurve,PQSMod_VertexSimplexHeightAbsolute
+		removeOcean = True
+		}
+		Properties
+		{
+		description = Dres is a very small planet; the first considered to be a dwarf. Its orbit is highly irregular and together with its size it took a long time to discover since half the time it was not where scientists expected to find a planet. Due to its nature of frequenting the bad parts of space, this dwarf planet was officially labeled as “Not to be trusted” by the scientific community.
+		radius = 138000
+		geeASL = 0.115
+		//mass = 3.21913224453102E+20
+		//gravParameter = 21484488600
+		rotates = True
+		rotationPeriod = 34800
+		tidallyLocked = False
+		initialRotation = 25
+		inverseRotThresholdAltitude = 100000
+		albedo = 0.12
+		emissivity = 0.88
+		coreTemperatureOffset = 0
+		isHomeWorld = True
+		timewarpAltitudeLimits = 0 10000 10000 30000 50000 100000 200000 300000
+		sphereOfInfluence = 32832839.5767762
+		hillSphere = 92059713.5005964
+		solarRotationPeriod = False
+		navballSwitchRadiusMult = 0.06
+		biomeMap = BUILTIN/dres_biome
+		useTheInName = False
+			Biomes
+			{
+				Biome
+				{
+				name = Poles
+				value = 0
+				color = 1,0.9647059,0,1
+				}
+				Biome
+				{
+				name = Midlands
+				value = 0
+				color = 0,1,0.9176471,1
+				}
+				Biome
+				{
+				name = Lowlands
+				value = 0
+				color = 1,0,0.8,1
+				}
+				Biome
+				{
+				name = Ridges
+				value = 0
+				color = 0.1058824,0.3568628,0.172549,1
+				}
+				Biome
+				{
+				name = Highlands
+				value = 0
+				color = 0.9960784,0.5372549,0,1
+				}
+				Biome
+				{
+				name = Impact Craters
+				value = 0
+				color = 0.09411765,0,1,1
+				}
+				Biome
+				{
+				name = Impact Ejecta
+				value = 0
+				color = 1,0.682353,0,1
+				}
+				Biome
+				{
+				name = Canyons
+				value = 0
+				color = 1,0,0,1
+				}
+			}
+		}
+		Orbit
+		{
+		referenceBody = Sun
+		inclination = 5
+		eccentricity = 0.145
+		semiMajorAxis = 40839348203
+		longitudeOfAscendingNode = 280
+		argumentOfPeriapsis = 90
+		meanAnomalyAtEpoch = 3.14000010490417
+		//meanAnomalyAtEpochD = 179.908753681645
+		epoch = 0
+		color = 0.1764706,0.1372549,0.09803922,0.5254902
+		}
+		Atmosphere
+		{
+		enabled = True
+		oxygen = False
+		staticDensityASL = 0.149935103789845
+		adiabaticIndex = 1.20000004768372
+		maxAltitude = 0.0010000
+		altitude = 0.010000
+		atmosphereDepth = 0.10000
+		gasMassLapseRate = 6.34180556250155
+		atmosphereMolarMass = 0.043
+		pressureCurveIsNormalized = False
+		//staticPressureASL = 6.755
+		temperatureCurveIsNormalized = False
+		temperatureLapseRate = 0.0024
+		temperatureSeaLevel = 12
+		ambientColor = 0.3058824,0.187128,0.2347621,1
+		lightColor = 0.999,0.999,0.999,1
+			pressureCurve
+			{
+			key = 0	101.325	-1.21756857142857E-02 -1.21756857142857E-02
+			key = 0.001 6.755 0 -0.000701
+			4
+			}
+			temperatureCurve
+			{
+			key = 0 233 0 -0.0004261126
+			key = 2000 232.8 -0.000573325 -0.000573325
+			key = 5000 153.7 -0.001877083 -0.001877083
+			key = 6000 150 0 0
+			key = 9000 150 0 0
+			key = 10000 160 0.003746914 0
+			}
+			temperatureSunMultCurve
+			{
+			key = 0 1 0 0
+			key = 2000 1 0 0
+			key = 5000 0 0 0
+			key = 9000 0 0 0
+			key = 9460 0.4551345 0.0006885778 0.0006885778
+			key = 10000 1 0 0
+			}
+			temperatureLatitudeSunMultCurve
+			{
+			key = 0 18 0 0.06497125
+			key = 40 25 0 0
+			key = 65 20 -0.5202533 -0.5202533
+			key = 90 5 0 0
+			}
+			AtmosphereFromGround
+			{
+			innerRadius = 319800
+			outerRadius = 328000
+			waveLength = 0.999,0.999,0.999,1
+			}
+		}
+		ScaledVersion
+		{
+		type = Vacuum
+		fadeStart = 95000
+		fadeEnd = 100000
+		sphericalModel = False
+		deferMesh = False
+			Material
+			{
+			color = 1,1,1,1
+			specular = 0,0,0,1
+			shininess = 0.078125
+			texture = BUILTIN/dwarfplanet100
+			normals = BUILTIN/dwarfplanet101
+			}
+		}
+		SpaceCenter
+		{
+		//PQSCity
+		latitude = 1
+		longitude = 51.49
+		lodvisibleRangeMult = 6
+		repositionToSphereSurface = true
+		repositionToSphereSurfaceAddHeight = true
+		repositionRadiusOffset = -20
+		reorientToSphere = true  //This
+		reorientFinalAngle = 0  //And this
+
+		// MapDecal 
+		decalLatitude = 1
+		decalLongitude = 51.49
+		heightMapDeformity = 150
+		absoluteOffset = 0
+		absolute = true
+		radius = 3000
+
+		// Ground Materials
+		groundColor = .091, .0851, 0.069, 0.5
+		groundTexture = BUILTIN/ksc_exterior_terrain_ground
+		}
+		PQS
+		{
+		minLevel = 2
+		maxLevel = 8
+		minDetailDistance = 6
+		maxQuadLengthsPerFrame = 0.03
+		fadeStart = 100000
+		fadeEnd = 110000
+		deactivateAltitude = 115000
+			Material
+			{
+			saturation = 1
+			contrast = 1.25
+			tintColor = 1,1,1,0
+			texTiling = 1024
+			texPower = 0.75
+			multiPower = 0.8
+			groundTexStart = 0
+			groundTexEnd = 30000
+			steepTiling = 50
+			steepPower = 0.75
+			steepTexStart = 200000
+			steepTexEnd = 300000
+			deepTex = BUILTIN/RockyGround
+			deepTexScale = 1,1
+			deepTexOffset = 0,0
+			deepMultiTex = BUILTIN/distantground
+			deepMultiTexScale = 1,1
+			deepMultiTexOffset = 0,0
+			deepMultiFactor = 8
+			mainTex = BUILTIN/RockyGround
+			mainTexScale = 1,1
+			mainTexOffset = 0,0
+			mainMultiTex = BUILTIN/distantground
+			mainMultiTexScale = 1,1
+			mainMultiTexOffset = 0,0
+			mainMultiFactor = 10
+			highTex = BUILTIN/RockyGround
+			highTexScale = 1,1
+			highTexOffset = 0,0
+			highMultiTex = BUILTIN/distantground
+			highMultiTexScale = 1,1
+			highMultiTexOffset = 0,0
+			highMultiFactor = 12
+			snowTex = BUILTIN/RockyGround
+			snowTexScale = 1,1
+			snowTexOffset = 0,0
+			snowMultiTex = BUILTIN/distantground
+			snowMultiTexScale = 1,1
+			snowMultiTexOffset = 0,0
+			snowMultiFactor = 14
+			steepTex = BUILTIN/Cliffs0149_18_S
+			steepTexScale = 1,1
+			steepTexOffset = 0,0
+			deepStart = 0
+			deepEnd = 0.01
+			mainLoStart = 0
+			mainLoEnd = 0.05
+			mainHiStart = 0.1
+			mainHiEnd = 0.15
+			hiLoStart = 0.1
+			hiLoEnd = 0.15
+			hiHiStart = 0.2
+			hiHiEnd = 0.25
+			snowStart = 0.2
+			snowEnd = 0.25
+			planetOpacity = 1
+			}
+			FallbackMaterial
+			{
+			saturation = 1.62
+			contrast = 1.9
+			tintColor = 1,1,1,0
+			texTiling = 1024
+			texPower = 0.75
+			multiPower = 0.75
+			groundTexStart = 0
+			groundTexEnd = 20000
+			multiFactor = 0.5
+			mainTex = BUILTIN/RockyGround
+			mainTexScale = 1,1
+			mainTexOffset = 0,0
+			planetOpacity = 1
+			}
+			PhysicsMaterial
+			{
+			bounceCombine = Average
+			frictionCombine = Maximum
+			frictionDirection2 = 0,0,0
+			bounciness = 0
+			staticFriction = 0.8
+			staticFriction2 = 0
+			dynamicFriction = 0.6
+			dynamicFriction2 = 0
+			}
+			Mods
+			{
+				VertexSimplexNoiseColor
+				{
+				blend = 1
+				colorStart = 0.7686567,0.6996614,0.6530895,1
+				colorEnd = 0,0,0,1
+				frequency = 2
+				octaves = 12
+				persistence = 0.5
+				seed = 346434
+				order = 200
+				enabled = True
+				}
+				HeightColorMap
+				{
+				blend = 0.7
+				order = 201
+				enabled = True
+					LandClasses
+					{
+						Class
+						{
+						name = AbyPl
+						color = 0,0,0,1
+						altitudeStart = 0
+						altitudeEnd = 0.5
+						lerpToNext = True
+						delete = False
+						}
+						Class
+						{
+						name = Beach
+						color = 0.1641791,0.1641791,0.1641791,1
+						altitudeStart = 0.5
+						altitudeEnd = 0.550000011920929
+						lerpToNext = True
+						delete = False
+						}
+						Class
+						{
+						name = Beach
+						color = 0.3731343,0.3731343,0.3731343,1
+						altitudeStart = 0.550000011920929
+						altitudeEnd = 1
+						lerpToNext = False
+						delete = False
+						}
+					}
+				}
+				AerialPerspectiveMaterial
+				{
+				atmosphereDepth = 150000
+				cameraAlt = 0
+				cameraAtmosAlt = 0
+				DEBUG_SetEveryFrame = True
+				globalDensity = -1E-05
+				heightDensAtViewer = 0
+				heightFalloff = 6.75
+				order = 100
+				enabled = True
+				}
+				VertexHeightMap
+				{
+				map = TheDresProject/PluginData/Dres_Height.png
+				offset = 0
+				deformity = 4000
+				scaleDeformityByRadius = False
+				order = 20
+				enabled = True
+				}
+				VertexSimplexHeight
+				{
+				deformity = 1700
+				frequency = 4
+				octaves = 12
+				persistence = 0.5
+				seed = 674624
+				order = 21
+				enabled = True
+				}
+				FlattenOcean
+				{
+				oceanRadius = 1
+				order = 25
+				enabled = True
+				}
+				VertexHeightNoise
+				{
+				deformity = 1000
+				frequency = 2
+				octaves = 4
+				persistence = 0.5
+				seed = 590676637
+				noiseType = RiggedMultifractal
+				mode = Low
+				lacunarity = 2.5
+				order = 22
+				enabled = True
+				}
+				VertexSimplexHeightAbsolute
+				{
+				deformity = 400
+				frequency = 18
+				octaves = 6
+				persistence = 0.5
+				seed = 4234532
+				order = 30
+				enabled = True
+				}
+			}
+		}
+	}
+}
