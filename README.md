@@ -8,7 +8,7 @@ For KSP 1.4.3 and 1.4.5
 
 INSTALLATION:
 
-1) Download and install Kopernicus. Minimum supported version is 1.4.3-2, though 1.3.1-9 may work.
+1) Download and install Kopernicus for your version of KSP.
 2) Ensure that ModuleManager, ModularFlightIntegrator, and Kopernicus are all installed. 
 (You don't need to reinstall any of these if you already have them)
 3) Put the AlienSpacePrograms folder in GameData.
