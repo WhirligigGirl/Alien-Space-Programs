@@ -1,6 +1,6 @@
 ALIEN SPACE PROGRAMS
-Version 1.5.1
-For KSP 1.3.1, 1.4.5 and 1.5.1
+Version 1.6.3
+For KSP 1.3.1 through 1.6.1
 
 ![http://www.antiwindowscatalog.com/media/ksp/ASP-Home-notext.png](http://www.antiwindowscatalog.com/media/ksp/ASP-Home-notext.png)
 
