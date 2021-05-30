@@ -1,16 +1,16 @@
-@Kopernicus:HAS[!AlienSpaceProgramSettings]:FOR[EveSpaceProgram]
+@Kopernicus:HAS[!AlienSpaceProgramSettings]:FOR[MunarSpaceProgram]
 {
 	#@AlienSpaceProgramSettings {}
 }
-@Kopernicus:HAS[@AlienSpaceProgramSettings:HAS[#Homeworld[Eve]]]:FOR[EveSpaceProgram]
+@Kopernicus:HAS[@AlienSpaceProgramSettings:HAS[#Homeworld[Mun]]]:FOR[MunarSpaceProgram]
 {
-	!Body[Eve]{}
+	!Body[Mun]{}
 
 	%Body[Bin] //Uninhabited Kerbin
 	{
 		identifier = AlienSpacePrograms/Bin
-		cacheFile = AlienSpacePrograms/0Miscellany/Cache/WildKerbin.bin
 		contractWeight = 30
+		cacheFile = AlienSpacePrograms/0Miscellany/Cache/WildKerbin.bin
 		Debug
 		{
 			update = true
@@ -34,16 +34,16 @@
 			//Still works in KSP 1.2 though
 			isHomeWorld = False
 			displayName = #autoLOC_910048 // Kerbin (Stock)
-			description = #aspLOC_000002 //A unique world, Bin has flat plains, soaring mountains and wide, blue oceans. With over 60% of its surface covered in water, an oxygenated atmosphere, and its close distance to the sun, Kerbin would seem to be perfect for Kerbal life. So why, then, are we on Duna?
+			description = #aspLOC_000041 //A unique world, Bin has flat plains, soaring mountains and wide, blue oceans. With over 60% of its surface covered in water, an oxygenated atmosphere, and its close distance to the sun, Kerbin would seem to be perfect for Kerbal life. So why, then, are we on Duna?
 			ScienceValues
 			{
-				landedDataValue = 8
-				splashedDataValue = 8
-				flyingLowDataValue = 5
-				flyingHighDataValue = 6
-				inSpaceLowDataValue = 7
-				inSpaceHighDataValue = 5
-				recoveryValue = 5
+				landedDataValue = 5
+				splashedDataValue = 5
+				flyingLowDataValue = 4.5
+				flyingHighDataValue = 4.5
+				inSpaceLowDataValue = 4
+				inSpaceHighDataValue = 2.5
+				recoveryValue = 8
 			}
 		}
 		ScaledVersion
@@ -127,7 +127,7 @@
 						Value
 						{
 							visibleRange = 10000
-							scale = 10,10,10
+							scale = 13,13,13
 							model = BUILTIN/monolith00
 							delete = False
 						}
@@ -157,7 +157,7 @@
 						Value
 						{
 							visibleRange = 10000
-							scale = 10,10,10
+							scale = 13,13,13
 							model = BUILTIN/monolith00
 							delete = False
 						}
@@ -187,7 +187,7 @@
 						Value
 						{
 							visibleRange = 10000
-							scale = 10,10,10
+							scale = 13,13,13
 							model = BUILTIN/monolith00
 							delete = False
 						}
@@ -217,7 +217,7 @@
 						Value
 						{
 							visibleRange = 10000
-							scale = 10,10,10
+							scale = 13,13,13
 							model = BUILTIN/monolith01
 							delete = False
 						}
@@ -261,22 +261,366 @@
 		}
 	}
 
-	@Body[Mun]
+	@Body[Kerbin] //Homeworld Mun
 	{
-		@Orbit
+		%cbNameLater = Mun
+		%identifier = AlienSpacePrograms/Mun
+		%cacheFile = AlienSpacePrograms/0Miscellany/Cache/MunKerbin.bin
+		%contractWeight = 30
+		@Template
 		{
-			@referenceBody = AlienSpacePrograms/Bin
+			@name = Mun
+			removeOcean = true
+		}
+		Debug
+		{
+			update = true
 		}
 		@Properties
 		{
-			%description = #aspLOC_000010 //The Mun is a large satellite orbiting Bin. It is mostly gray in appearance, with craters of various sizes dotting its otherwise smooth surface. It was the first moon of another planet to be discovered due to its relatively large size. Sometimes, Mun can be seen as a separate point of light in the sky next to Bin.
-			%displayName = #aspLOC_000011 //Mun
+			description = #aspLOC_000065 
+			displayName = #autoLOC_910035 //The Mun
+			radius = 200000
+			geeASL = 0.166056700098353
+			mass = 9.7599066119646E+20
+			gravParameter = 65138397520.7807
+			rotates = True
+			rotationPeriod = 138984.376574476
+			tidallyLocked = True
+			initialRotation = 230
+			inverseRotThresholdAltitude = 100000
+			albedo = 0.1
+			emissivity = 0.9
+			coreTemperatureOffset = 5
+			timewarpAltitudeLimits = 0 5000 5000 10000 25000 50000 100000 200000
+			sphereOfInfluence = 2429559.11656475
+			solarRotationPeriod = False
+			navballSwitchRadiusMult = 0.06
+			navballSwitchRadiusMultLow = 0.055
+			biomeMap = BUILTIN/mun_biome
+			nonExactThreshold = -1
+			exactSearch = False
+			useTheInName = True
+			selectable = True
+			RDVisibility = Visible
+			RnDRotation = False
+			maxZoom = 60000
 			@ScienceValues
 			{
-				landedDataValue = 8
-				inSpaceLowDataValue = 7
-				inSpaceHighDataValue = 5
-				recoveryValue = 5
+				landedDataValue = 0.3
+				splashedDataValue = 0.4
+				flyingLowDataValue = 0.7
+				flyingHighDataValue = 0.9
+				inSpaceLowDataValue = 1
+				inSpaceHighDataValue = 1.5
+				recoveryValue = 1
+				flyingAltitudeThreshold = 1
+				spaceAltitudeThreshold = 30000
+			}
+			Biomes
+			{
+				Value
+				{
+					name = Midlands // The name of this biome.
+					displayName = #autoLOC_6002049
+					value = 0 // A value that gets multiplied with every amount of science that is returned in the biome.
+					color = 0.36470589,0.458823532,0.509803951,1 // The color of the biome on the biome map.
+				}
+				Value
+				{
+					name = Northern Basin // The name of this biome.
+					displayName = #autoLOC_6002055
+					value = 0 // A value that gets multiplied with every amount of science that is returned in the biome.
+					color = 0.423529416,0.458823532,0.576470613,1 // The color of the biome on the biome map.
+				}
+				Value
+				{
+					name = East Crater // The name of this biome.
+					displayName = #autoLOC_6002021
+					value = 0 // A value that gets multiplied with every amount of science that is returned in the biome.
+					color = 0.580392182,0.627451003,0.796078444,1 // The color of the biome on the biome map.
+				}
+				Value
+				{
+					name = Northwest Crater // The name of this biome.
+					displayName = #autoLOC_6002064
+					value = 0 // A value that gets multiplied with every amount of science that is returned in the biome.
+					color = 0.407843143,0.474509805,0.694117665,1 // The color of the biome on the biome map.
+				}
+				Value
+				{
+					name = Southwest Crater // The name of this biome.
+					displayName = #autoLOC_6002084
+					value = 0 // A value that gets multiplied with every amount of science that is returned in the biome.
+					color = 0.65882355,0.678431392,0.737254918,1 // The color of the biome on the biome map.
+				}
+				Value
+				{
+					name = Farside Crater // The name of this biome.
+					displayName = #autoLOC_6002028
+					value = 0 // A value that gets multiplied with every amount of science that is returned in the biome.
+					color = 0.56078434,0.647058845,0.90196079,1 // The color of the biome on the biome map.
+				}
+				Value
+				{
+					name = Canyons // The name of this biome.
+					displayName = #autoLOC_6002010
+					value = 0 // A value that gets multiplied with every amount of science that is returned in the biome.
+					color = 0.325490206,0.368627459,0.521568656,1 // The color of the biome on the biome map.
+				}
+				Value
+				{
+					name = Polar Crater // The name of this biome.
+					displayName = #autoLOC_6002067
+					value = 0 // A value that gets multiplied with every amount of science that is returned in the biome.
+					color = 0.603921592,0.647058845,0.670588255,1 // The color of the biome on the biome map.
+				}
+				Value
+				{
+					name = Poles // The name of this biome.
+					displayName = #autoLOC_6002071
+					value = 0 // A value that gets multiplied with every amount of science that is returned in the biome.
+					color = 0.917647064,0.925490201,0.929411769,1 // The color of the biome on the biome map.
+				}
+				Value
+				{
+					name = Polar Lowlands // The name of this biome.
+					displayName = #autoLOC_6002070
+					value = 0 // A value that gets multiplied with every amount of science that is returned in the biome.
+					color = 0.811764717,0.827450991,0.839215696,1 // The color of the biome on the biome map.
+				}
+				Value
+				{
+					name = Highlands // The name of this biome.
+					displayName = #autoLOC_6002038
+					value = 0 // A value that gets multiplied with every amount of science that is returned in the biome.
+					color = 0.450980395,0.53725493,0.58431375,1 // The color of the biome on the biome map.
+				}
+				Value
+				{
+					name = Highland Craters // The name of this biome.
+					displayName = #autoLOC_6002037
+					value = 0 // A value that gets multiplied with every amount of science that is returned in the biome.
+					color = 0.694117665,0.733333349,0.870588243,1 // The color of the biome on the biome map.
+				}
+				Value
+				{
+					name = Midland Craters // The name of this biome.
+					displayName = #autoLOC_6002047
+					value = 0 // A value that gets multiplied with every amount of science that is returned in the biome.
+					color = 0.164705887,0.247058824,0.294117659,1 // The color of the biome on the biome map.
+				}
+				Value
+				{
+					name = East Farside Crater // The name of this biome.
+					displayName = #autoLOC_6002022
+					value = 0 // A value that gets multiplied with every amount of science that is returned in the biome.
+					color = 0.603921592,0.611764729,0.917647064,1 // The color of the biome on the biome map.
+				}
+				Value
+				{
+					name = Twin Craters // The name of this biome.
+					displayName = #autoLOC_6002087
+					value = 0 // A value that gets multiplied with every amount of science that is returned in the biome.
+					color = 0.678431392,0.745098054,0.945098042,1 // The color of the biome on the biome map.
+				}
+				Value
+				{
+					name = Lowlands // The name of this biome.
+					displayName = #autoLOC_6002044
+					value = 0 // A value that gets multiplied with every amount of science that is returned in the biome.
+					color = 0.254901975,0.356862754,0.41568628,1 // The color of the biome on the biome map.
+				}
+				Value
+				{
+					name = Farside Basin // The name of this biome.
+					displayName = #autoLOC_6002027
+					value = 0 // A value that gets multiplied with every amount of science that is returned in the biome.
+					color = 0.529411793,0.556862772,0.639215708,1 // The color of the biome on the biome map.
+				}
+			}
+		}
+		@Orbit
+		{
+			//We can PostSpawnOrbit around Bin to get it right.
+			//%referenceBody = Sun
+			%referenceBody = AlienSpacePrograms/Bin
+			inclination = 0
+			eccentricity = 0
+			semiMajorAxis = 12000000
+			longitudeOfAscendingNode = 0
+			argumentOfPeriapsis = 0
+			meanAnomalyAtEpoch = 1.70000004768372
+			meanAnomalyAtEpochD = 97.4028279043159
+			epoch = 0
+			color = 0.611764729,0.627451003,0.70588237,0.501960814
+			nodeColor = 0.611764729,0.627451003,0.70588237,0.501960814
+			period = 138984.376574476
+		}
+		//PostSpawnOrbit
+		//{
+		//	referenceBody = AlienSpacePrograms/Bin
+		//}
+		@Atmosphere
+		{
+			//needed for proper engine ISP on Bin.
+			staticPressureASL = 101.325
+			enabled = true
+			oxygen = false
+			altitude = 3000
+			addAFG = false
+			pressureCurve
+			{
+				key = 0.0 0.00000001 0 0
+				key = 3000 0 0 0
+			}
+		}
+		SpaceCenter
+		{
+			//PQSCity
+			latitude = 0
+			longitude = 81.0
+			lodvisibleRangeMult = 6
+			repositionToSphereSurface = true
+			repositionToSphereSurfaceAddHeight = true
+			repositionRadiusOffset = -20
+			reorientFinalAngle = 189
+			
+			//MapDecal 
+			decalLatitude = 0
+			decalLongitude = 81.0
+			heightMapDeformity = 2800
+			absoluteOffset = 0
+			absolute = true
+			radius = 10000
+
+			//Ground Materials
+			groundColor = .091, .0851, 0.069, 0.5
+			groundTexture = BUILTIN/ksc_exterior_terrain_ground
+		}
+		@PQS
+		{
+			Mods
+			{
+				//Ground stations
+				City2
+				{
+					snapToSurface = True
+					alt = 5325.521280307119
+					lat = 80.952716674933939
+					lon = -143.14467131266403
+					objectName = Northern Highlands
+					up = 0,1,0
+					rotation = 0
+					snapHeightOffset = 7
+					commnetStation = True
+					isKSC = False
+					order = 100
+					enabled = True
+					name = CommNetDish
+					LOD
+					{
+						Value
+						{
+							visibleRange = 30000
+							keepActive = False
+							model = BUILTIN/dish1
+							scale = 10,10,10
+							delete = False
+						}
+					}
+				}
+				City2
+				{
+					snapToSurface = True
+					alt = 4435.4395559526747
+					lat = -80.479840595966778
+					lon = -104.84608746716289
+					objectName = Southern Mesa
+					up = 0,1,0
+					rotation = 0
+					snapHeightOffset = 7
+					commnetStation = True
+					isKSC = False
+					order = 100
+					enabled = True
+					name = CommNetDish
+					LOD
+					{
+						Value
+						{
+							visibleRange = 30000
+							keepActive = False
+							model = BUILTIN/dish1
+							scale = 10,10,10
+							delete = False
+						}
+					}
+				}
+			}
+		}
+		%Ocean // Placeholder taken from Oceanus, example ocean world
+		{
+			maxQuadLengthsPerFrame = 0.03
+			minLevel = -4
+			maxLevel = -2
+			minDetailDistance = 16
+			oceanColor = 0.15,0.25,0.35,0
+			Material
+			{
+				colorFromSpace = 0.15,0.25,0.35,0
+				color = 0.15,0.25,0.35,0
+			}
+			FallbackMaterial
+			{
+				colorFromSpace = 0.15,0.25,0.35,0
+				color = 0.15,0.25,0.35,0
+			}
+			Mods
+			{
+				AerialPerspectiveMaterial
+				{
+					globalDensity = -0.00001
+					heightFalloff = 6.75
+					atmosphereDepth = 150000
+					DEBUG_SetEveryFrame = true
+					cameraAlt = 0
+					cameraAtmosAlt = 0
+					heightDensAtViewer = 0
+					enabled = true
+					order = 200
+				}
+				OceanFX
+				{
+					Watermain
+					{
+						waterTex-0 = BUILTIN/sea-water1
+						waterTex-1 = BUILTIN/sea-water2
+						waterTex-2 = BUILTIN/sea-water3
+						waterTex-3 = BUILTIN/sea-water4
+						waterTex-4 = BUILTIN/sea-water5
+						waterTex-5 = BUILTIN/sea-water6
+						waterTex-6 = BUILTIN/sea-water7
+						waterTex-7 = BUILTIN/sea-water8
+					}
+					framesPerSecond = 1
+					spaceAltitude = 150000
+					blendA = 0
+					blendB = 0
+					texBlend = 0
+					angle = 0
+					specColor = 0.0,0.0,-1,0
+					oceanOpacity = 0
+					spaceSurfaceBlend = 0
+					enabled = true
+					order = 200
+				}
+			}
+			Fog
+			{
+				fogColorEnd = 0.15,0.25,0.35,0
+				fogColorStart = 0.15,0.25,0.35,0
+				skyColorOpacityBase = 0.7
 			}
 		}
 	}
@@ -289,407 +633,32 @@
 		}
 		@Properties
 		{
-			%description = #aspLOC_000012 //Minmus is the smallest moon orbiting Bin. Due to the large amount of squinting and eye strain associated with its discovery, wearing glasses has become synonymous with being an accomplished astronomer.
+			%description = #aspLOC_000066 //Minmus is the smallest moon orbiting Novo Kerbin. It is often mistaken as dirt on the telescope lenses or dead pixels but the top minds at the Kerbal Astronomical Society assure us that it is a real moon never the less.
 			@ScienceValues
 			{
-				landedDataValue = 8
+				landedDataValue = 9
 				inSpaceLowDataValue = 7
 				inSpaceHighDataValue = 5
-				recoveryValue = 5
+				recoveryValue = 6
 			}
 		}
 	}
-    
-	@Body[Kerbin] // Homeworld Eve
+
+	//I don't need to rebalance the sun's luminosity as it is in Stock Kerbin's orbit
+
+	@Body[Laythe]
 	{
-		//Legacy cbNameLater
-		%cbNameLater = Eve
-		%identifier = AlienSpacePrograms/Eve
-		%cacheFile = AlienSpacePrograms/0Miscellany/Cache/Evekerbin.bin
-		%contractWeight = 30
-		@Template
-		{
-			@name = Eve
-		}
-		%Debug
-		{
-			%update = true
-		}
 		@Properties
 		{
-			//displayName replaces cbNameLater for localization support, also supports KSP 1.2 still
-			%displayName = #autoLOC_910049 // Eve
-			%description = #aspLOC_000001 // (Some localized description)
-			%isHomeWorld = True
-			@ScienceValues
-			{
-				//Surface and low flight should be as easy as Kerbin
-				//High flight would be slightly higher, space even more so
-				%landedDataValue = 0.3
-				%splashedDataValue = 0.4
-				%flyingLowDataValue = 0.7
-				%flyingHighDataValue = 1.2
-				%inSpaceLowDataValue = 2
-				%inSpaceHighDataValue = 3
-				%recoveryValue = 1
-			}
-		}
-		@Atmosphere
-		{
-			// Fake atmosphere needed for engine ISP calculations
-			%staticPressureASL = 101.325
-		}
-		SpaceCenter
-		{
-			//PQSCity
-			latitude = 0
-			longitude = -73.2
-			lodvisibleRangeMult = 6
-			repositionToSphereSurface = true
-			repositionToSphereSurfaceAddHeight = true
-			repositionRadiusOffset = -20
-			//Fix added for induced rotation
-			reorientToSphere = true  
-			reorientFinalAngle = -17
-			//MapDecal 
-			decalLatitude = 0
-			decalLongitude = -73.2
-			heightMapDeformity = 478
-			absoluteOffset = 0
-			absolute = true
-			radius = 10000
-
-			//Ground Materials
-			groundColor = 0.169,0.117,0.230,0.18
-			groundTexture = BUILTIN/SandyGround
-		}
-		@ScaledVersion
-		{
-
-		}
-		@PQS
-		{
-			Mods
-			{
-				// Ground stations
-				City2
-				{
-					snapToSurface = True
-					alt = 6866
-					lat = -28.0765530079341
-					lon = -147.998696163873
-					objectName = Olympus
-					up = 0,1,0
-					rotation = 0
-					snapHeightOffset = 7
-					commnetStation = True
-					isKSC = False
-					order = 100
-					enabled = True
-					name = CommNetDish
-					LOD
-					{
-						Value
-						{
-							visibleRange = 30000
-							keepActive = False
-							model = BUILTIN/dish1
-							scale = 5,5,5
-							delete = False
-						}
-					}
-				}
-				City2
-				{
-					snapToSurface = True
-					alt = 6440.659
-					lat = -0.48433084086612055
-					lon = 167.50103257680502
-					objectName = Interior Mountains
-					up = 0,1,0
-					rotation = 0
-					snapHeightOffset = 7
-					commnetStation = True
-					isKSC = False
-					order = 100
-					enabled = True
-					name = CommNetDish
-					LOD
-					{
-						Value
-						{
-							visibleRange = 30000
-							keepActive = False
-							model = BUILTIN/dish1
-							scale = 5,5,5
-							delete = False
-						}
-					}
-				}
-				City2
-				{
-					snapToSurface = True
-					alt = 4452.5981734956149
-					lat = -43.126775380409427
-					lon = 124.80857085281777
-					objectName = Southwest Mountains
-					up = 0,1,0
-					rotation = 0
-					snapHeightOffset = 5
-					commnetStation = True
-					isKSC = False
-					order = 100
-					enabled = True
-					name = CommNetDish
-					LOD
-					{
-						Value
-						{
-							visibleRange = 30000
-							keepActive = False
-							model = BUILTIN/dish1
-							scale = 5,5,5
-							delete = False
-						}
-					}
-				}
-				City2
-				{
-					snapToSurface = True
-					alt = 2875.837336734985
-					lat = -5.0450869068664952
-					lon = 98.607172888244577
-					objectName = Pixel Plateau
-					up = 0,1,0
-					rotation = 0
-					snapHeightOffset = 7
-					commnetStation = True
-					isKSC = False
-					order = 100
-					enabled = True
-					name = CommNetDish
-					LOD
-					{
-						Value
-						{
-							visibleRange = 30000
-							keepActive = False
-							model = BUILTIN/dish1
-							scale = 5,5,5
-							delete = False
-						}
-					}
-				}
-				City2
-				{
-					snapToSurface = True
-					alt = 6192.9726707669906
-					lat = 32.113764674513057
-					lon = 51.64565821598179
-					objectName = Eastern Sea
-					up = 0,1,0
-					rotation = 0
-					snapHeightOffset = 7
-					commnetStation = True
-					isKSC = False
-					order = 100
-					enabled = True
-					name = CommNetDish
-					LOD
-					{
-						Value
-						{
-							visibleRange = 30000
-							keepActive = False
-							model = BUILTIN/dish1
-							scale = 5,5,5
-							delete = False
-						}
-					}
-				}
-				City2
-				{
-					snapToSurface = True
-					alt = 1442.8325664221775
-					lat = 6.857061499034022
-					lon = 3.910613287059558
-					objectName = Crater Lake
-					up = 0,1,0
-					rotation = 0
-					snapHeightOffset = 7
-					commnetStation = True
-					isKSC = False
-					order = 100
-					enabled = True
-					name = CommNetDish
-					LOD
-					{
-						Value
-						{
-							visibleRange = 30000
-							keepActive = False
-							model = BUILTIN/dish1
-							scale = 5,5,5
-							delete = False
-						}
-					}
-				}
-
-			}
-		}
-		%Ocean //Put Eve's ocean config back for Scatterer's benefit
-		{
-			ocean = True
-			oceanColor = 0.266666681,0.243137255,0.305882365,1
-			oceanHeight = 0
-			density = 1.5
-			minLevel = 1
-			maxLevel = 7
-			minDetailDistance = 8
-			maxQuadLengthsPerFrame = 0.03
-			Material
-			{
-				color = 0.678159177,0.580055177,0.745283008,1
-				colorFromSpace = 0.443137258,0.411764711,0.450980395,1
-				specColor = 0.396078438,0.396078438,0.396078438,1
-				shininess = 0.0831425
-				gloss = 0.2
-				tiling = 1000
-				waterTex = BUILTIN/sea-water9
-				waterTexScale = 1,1
-				waterTexOffset = 0,0
-				waterTex1 = BUILTIN/sea-water10
-				waterTex1Scale = 1,1
-				waterTex1Offset = 0,0
-				bTiling = 800
-				bumpMap = BUILTIN/Eve2_01
-				bumpMapScale = 1,1
-				bumpMapOffset = 0,0
-				displacement = 0.01
-				texDisplacement = 0.31
-				dispFreq = 0.1
-				mix = 0.554
-				oceanOpacity = 1
-				falloffPower = 5
-				falloffExp = 0
-				fogColor = 0.917910457,0.917910457,1,1
-				heightFallOff = 0.2
-				globalDensity = -8E-06
-				atmosphereDepth = 150000
-				fogColorRamp = BUILTIN/purple_atmogradiant
-				fogColorRampScale = 1,1
-				fogColorRampOffset = 0,0
-				fadeStart = 20000
-				fadeEnd = 60000
-				planetOpacity = 1
-				normalXYFudge = 1.4
-				normalZFudge = 1.18
-			}
-			FallbackMaterial
-			{
-				color = 0.525490224,0.46274513,0.568627477,1
-				colorFromSpace = 0.265444487,0.244319439,0.305970132,1
-				specColor = 1,1,1,1
-				shininess = 1
-				gloss = 1
-				tiling = 2000
-				waterTex = BUILTIN/quiet
-				waterTexScale = 1,1
-				waterTexOffset = 0,0
-				waterTex1 = BUILTIN/quiet
-				waterTex1Scale = 1,1
-				waterTex1Offset = 0,0
-				fadeStart = 20000
-				fadeEnd = 60000
-				planetOpacity = 1
-			}
-			Mods
-			{
-				AerialPerspectiveMaterial
-				{
-					atmosphereDepth = 5000
-					DEBUG_SetEveryFrame = False
-					globalDensity = -7.5E-06
-					heightFalloff = 0.2
-					oceanDepth = 0
-					order = 100
-					enabled = True
-					name = _Material_AerialPerspective
-				}
-				RemoveQuadMap
-				{
-					map = BUILTIN/eve_height_new
-					deformity = 0
-					maxHeight = 0.7
-					minHeight = 0
-					order = 1
-					enabled = True
-					name = QuadRemoveMap
-				}
-			}
-			Fog
-			{
-				afgAltMult = 0.05
-				afgBase = 0.6
-				afgLerp = False
-				afgMin = 0.05
-				fogColorEnd = 0,0.0850000009,0.122500002,1
-				fogColorStart = 0.407954782,0.324893236,0.46226418,1
-				fogDensityAltScalar = -0.0008
-				fogDensityEnd = 0.025
-				fogDensityExponent = 1
-				fogDensityPQSMult = 0.02
-				fogDensityStart = 0.005
-				skyColorMult = 1.1
-				skyColorOpacityAltMult = 12
-				skyColorOpacityBase = 0.33
-				sunAltMult = 0.01
-				sunBase = 0.5
-				sunMin = 0.05
-				useFog = True
-			}
+			description = #aspLOC_000043 //When Laythe was first discovered, it was not entered into the collective memory because we thought it was Kerbin. Luckily this error was corrected when a couple gallons in the southern flats realized that telescopes don't work that way. That fluid was shortly afterwards "promoted" and respecialized as a rocket test subject.
 		}
 	}
-	@Body[Gilly]
+
+	@Body[Jool] // Include Jool Biomes and Great Green Spot by KSPSnark, MIT License. https://github.com/KSPSnark/JoolBiomes
 	{
-		@Orbit
-		{
-			%referenceBody = AlienSpacePrograms/Eve
-		}
 		@Properties
 		{
-			%description = #aspLOC_000013 //Gilly is the smallest known satellite in the entire solar system. It was thought to be a planet for a very long time due to its small apparent size in the sky, until an astronomer decided to figure out what its trajectory should be. When he realized that it could not orbit the sun according to the known laws of gravitation, he realized that Gilly was in fact a satellite of Eve this whole time!
-			//Gilly is tougher to get to from Eve than Minmus is from Kerbin
-			//so maybe slightly higher values than Minmus.
-			@ScienceValues
-			{
-				landedDataValue = 5
-				inSpaceLowDataValue = 5
-				inSpaceHighDataValue = 4
-				recoveryValue = 3
-			}
-		}
-	}
-
-	//Science and solar panel rebalancing
-	@Body[Sun]
-	{
-		@ScaledVersion
-		{
-			Light
-			{
-				//Adjust luminosity to rebalance solar panel power (Eve)
-				//It's probably not actually following the inverse square law; I can check later.
-				luminosity = 2601.73
-			}
-		}
-	}
-
-	@Body[Jool] // Include Jool Biomes and Great Green Spot by KSPSnark
-	{
-		%Properties
-		{
-			%description = #jbLOC_000024
+			description = #aspLOC_000044 //Jool is rather known for being a particularly large, predominantly green planet. The Ocean has longed to visit it ever since a couple thousand gallons under the highlands hypothesized that Jool could have some of the elements neccesary for Minmus life.
 			biomeMap = AlienSpacePrograms/Jool/PluginData/JoolBiome-GGS.png
 			Biomes
 			{
@@ -754,22 +723,34 @@
 			}
 		}
 	}
-	@Body[Laythe]
-	{
-		@Properties
-		{
-			%description = #aspLOC_000014 //When Laythe was first discovered, it was not entered in the records because the scientist in charge thought he was looking at Bin. Luckily this error was corrected when a plucky intern informed him that, "the big green thing next to it probably isn't a moon." The intern was shortly "promoted" afterwards and moved to the experimental rocket testing program.
-		}
-
-	}
 }
 
-@Kopernicus:HAS[!AlienSpaceProgramSettings]:FOR[EveSpaceProgram]
+@Kopernicus:HAS[!AlienSpaceProgramSettings]:FOR[MunarSpaceProgram]
 {
 	#@AlienSpaceProgramSettings {}
 }
 //Hopefully this gets applied after the system's other properties get changed
-@Kopernicus:HAS[@AlienSpaceProgramSettings:HAS[#Homeworld[Eve],#UseRestoredDuna[True]]]:FOR[EveSpaceProgram]
+@Kopernicus:HAS[@AlienSpaceProgramSettings:HAS[#Homeworld[Mun],#NoPlaceholderAtmosphere[True]]]:FOR[MunarSpaceProgram]
+{
+	@Body[Kerbin]
+	{
+		!Atmosphere{}
+		Atmosphere
+		{
+			//needed for proper engine ISP on Bin.
+			staticPressureASL = 101.325
+			enabled = false
+			oxygen = false
+		}
+	}
+}
+
+@Kopernicus:HAS[!AlienSpaceProgramSettings]:FOR[MunarSpaceProgram]
+{
+	#@AlienSpaceProgramSettings {}
+}
+//Hopefully this gets applied after the system's other properties get changed
+@Kopernicus:HAS[@AlienSpaceProgramSettings:HAS[#Homeworld[Mun],#UseRestoredDuna[True]]]:FOR[MunarSpaceProgram]
 {
 	@Body[Duna]
 	{
