@@ -1,6 +1,6 @@
 ALIEN SPACE PROGRAMS
-Version 1.7.3
-For KSP 1.3.1 through 1.7.3
+Version 1.12.0
+For KSP 1.12.x and Kopernicus Stable Branch 1.12.x
 
 ![http://www.antiwindowscatalog.com/media/ksp/ASP-Home-notext.png](http://www.antiwindowscatalog.com/media/ksp/ASP-Home-notext.png)
 
@@ -43,6 +43,7 @@ CREDITS:
 * Sigma88 (Assistance with the initial creation of Duna Space Program)
 * Probus (Co-creator of Little Green Men from Mars, inspiration for Duna Space Program)
 * BigFastStupidHead (providing Dres as an option)
+* Wile1411 (Updated biome map for Restored Duna)
 
 ----------------------------
 
